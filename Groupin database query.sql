@@ -20,12 +20,10 @@ DROP TABLE if EXISTS `group`;
 
 CREATE TABLE `group` (
 	groupID INT NOT NULL PRIMARY KEY,
-	userID CHAR(9) NOT NULL,
 	username VARCHAR(20) NOT NULL,
 	classID VARCHAR(10),
 	leaderID CHAR(9) NOT NULL,
 	reserved_quota INT NOT NULL,
-	school_email VARCHAR(26) NOT NULL,
 	description TEXT
 );                                                                          
 

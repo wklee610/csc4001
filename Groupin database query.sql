@@ -20,7 +20,7 @@ DROP TABLE if EXISTS `group`;
 
 CREATE TABLE `group` (
 	groupID INT NOT NULL PRIMARY KEY,
-	username VARCHAR(20) NOT NULL,
+	groupname VARCHAR(20) NOT NULL,
 	classID VARCHAR(10),
 	leaderID CHAR(9) NOT NULL,
 	reserved_quota INT NOT NULL,

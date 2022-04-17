@@ -5,7 +5,7 @@ DROP TABLE if EXISTS user;
 CREATE TABLE `user` (
 	userID CHAR(9) NOT NULL PRIMARY KEY,
 	username VARCHAR(20) NOT NULL,
-	`PASSWORD` VARCHAR(20) NOT NULL,
+	userpassword VARCHAR(20) NOT NULL,
 	`credit` INT NOT NULL,
 	wechat_num VARCHAR(30) NOT NULL,
 	phone_num INT NOT NULL,

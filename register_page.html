@@ -35,32 +35,33 @@
         <h9>&nbsp;</h9>
         <legend class="text-center">User Registeration</legend>
         <h9>&nbsp;</h9>
-    <form class="form-horizontal">
+
         
+    <form action = "register.php" class = "form-horizontal" role="form" method="post">
     <div class="form-group">
-        <label for="inputEmail" class="col-md-3 control-label">Username</label>
+        <label for="inputUsername" class="col-md-3 control-label">Username</label>
         <div class="col-md-9">
-        <input type="email" class="form-control" id="inputEmail" placeholder="Username">
+        <input type="username" class="form-control" name="inputUsername" placeholder="Username">
         </div>
     </div>
     <div class="form-group">
         <label for="inputPassword" class="col-md-3 control-label">Password</label>
         <div class="col-md-9">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <input type="password" class="form-control" name="inputPassword" placeholder="Password">
         </div>
     </div>
 
 
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label for="inputPassword" class="col-md-3 control-label">Confirm Password</label>
         <div class="col-md-9">
         <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password Again">
         </div>
-    </div>
+    </div> -->
     
     <div class="form-group">
         <div class="col-md-offset-6 col-md-5">
-        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-user"></span> Register</button>
+        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-user"></span> Register</button>
         </div>
         
     </div>
@@ -71,3 +72,4 @@
     </div>
 </body>
 </html>
+

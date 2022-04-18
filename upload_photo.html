@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel= "stylesheet" type="text/css"> 
+    <script src="jquery/jquery-3.6.0.min.js" type = "text/javascript" charset="utf-8"></script>
+    <script src ="bootstrap/js/bootstrap.min.js" type = "text/javascript" charset="utf-8"></script>
+    <script type = "text/javascript">
+        function fileClick(){
+            document.getElementById('file').click()
+        }
+
+        function upCh(file){
+        let img = document.getElementById('fileimg')
+        let formData = new FormData()
+        let imgUrl = file.files[0];
+        if (imfUrl){
+            formData.append('file',imgUrl);
+            imgUrl.src = window.URL.createObjectURL(imgUrl)
+            ///////Backend transfer
+
+        }
+        }
+    </script>
+</head>
+
+
+<body class="container">
+    <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#">Groupin</a>
+
+        
+    </nav>
+
+
+
+    <div class="row">
+    <div class="col-md-3">
+        <input type = "file" id = "file" oncharge="upCh(this)" />
+        <br/>
+        <img id = "fileimg" src = ""/>
+        <br/>
+        <button class= "btn" onclick="fileClick()">Upload Photo</button>
+
+        
+
+
+    </div>
+
+    
+    
+
+    </div>
+    <div class="col-md-4"></div>
+    </div>
+</body>
+</html>

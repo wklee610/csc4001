@@ -1,7 +1,7 @@
 <?php
 session_start();
 header("Content-type:text/html;charset=utf-8");
-if (isset ( $_SESSION ["visitcode"] )){
+if (isset ( $_SESSION ["visitcode"] )){//must be logged in
 
 $link=mysqli_connect("localhost","root","","groupin"); 
 if (!$link)
@@ -16,13 +16,13 @@ $reservedquota=($_POST['inputReservedQuota']);
 
 $leaderID=$_SESSION ["visitcode"];
 
-$ID=mt_rand(1,99999999999);
+$ID=mt_rand(1,99999999999);//randomly assigned a group ID
 while(TRUE){
 	$IDsql="select * from `group` where groupID='$ID'";
 	$IDresult=mysqli_query($link,$IDsql);
 	$IDrow=mysqli_fetch_assoc($IDresult);
 	if($IDrow!=null){
-		$ID=mt_rand(1,99999999999);
+		$ID=mt_rand(1,99999999999);//change group ID if it has been repeated
 	}else{
 		break;
 	}
@@ -30,7 +30,7 @@ while(TRUE){
 	
 $sql2="insert into `group`(groupID,groupname,classID,leaderID,reserved_quota,groupdescription)
  values($ID,'$groupname','$classID','$leaderID','$reservedquota','$groupdescription')";
-$sql3="insert into `tojoin`(groupID, userID) values('$ID','$leaderID')";
+$sql3="insert into `tojoin`(groupID, userID) values('$ID','$leaderID')";//maker of this group is also a member, so add the user into the member db
 $result2=mysqli_multi_query($link,$sql2);
 $result3=mysqli_query($link,$sql3);
 echo "Group made successfully";

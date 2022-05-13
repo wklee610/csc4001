@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS  `Groupin`;				#delete database if has name of the Group
 CREATE DATABASE IF NOT EXISTS  `Groupin`;			#create database of Groupin
 USE `Groupin`;							#use database of Groupin 
 
-DROP TABLE if EXISTS `user`;
+DROP TABLE if EXISTS `user`;					#drop table if has name of the user 
 
 CREATE TABLE `user` (
 	`userID` VARCHAR(9) NOT NULL PRIMARY KEY,
@@ -18,7 +18,7 @@ CREATE TABLE `user` (
 
 
 
-DROP TABLE if EXISTS `group`;
+DROP TABLE if EXISTS `group`;					#drop table if has name of the group 
 
 CREATE TABLE `group` (
 	`groupID` VARCHAR(10) NOT NULL PRIMARY KEY,
@@ -30,7 +30,7 @@ CREATE TABLE `group` (
 );                                                                          
 
 
-DROP TABLE if EXISTS `content`;
+DROP TABLE if EXISTS `content`;					#drop table if has name of the content 
 
 CREATE TABLE `content` (
 	`leaderID` VARCHAR(9) NOT NULL PRIMARY KEY,
@@ -50,7 +50,7 @@ CREATE TABLE `credit` (
 	`groupID` INT NOT NULL
 );
 
-DROP TABLE if EXISTS `tojoin`;
+DROP TABLE if EXISTS `tojoin`;					#drop table if has name of the tojoin 
 
 CREATE TABLE `tojoin`(
 	`groupID` VARCHAR(10) NOT NULL,

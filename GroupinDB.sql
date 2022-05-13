@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS  `Groupin`;
-CREATE DATABASE IF NOT EXISTS  `Groupin`;
-USE `Groupin`;
+DROP DATABASE IF EXISTS  `Groupin`;				#delete database if has name of the Groupin
+CREATE DATABASE IF NOT EXISTS  `Groupin`;			#create database of Groupin
+USE `Groupin`;							#use database of Groupin 
 
 DROP TABLE if EXISTS `user`;
 

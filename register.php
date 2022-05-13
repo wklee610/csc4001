@@ -17,11 +17,11 @@ $sql1="select * from user where username='$name'";
 $result=mysqli_query($link,$sql1);
 $row=mysqli_fetch_assoc($result);
 if($row!=null){
-	echo 'Username already existed';
+	echo 'Username already existed';//search username, return error if username is already existed
 header("Refresh:2;url=register_page.html");}
 				
 	else{
-	$ID=mt_rand(1,999999999);
+	$ID=mt_rand(1,999999999);//randomly assigned user ID
 	while(TRUE){
 		$IDsql="select * from user where userID='$ID'";
 		$IDresult=mysqli_query($link,$IDsql);
@@ -32,7 +32,7 @@ header("Refresh:2;url=register_page.html");}
 			break;
 		}
 	}
-	
+	//add new user info into the db
 	$sql2="insert into user(userID,username,userpassword,wechat_num,phone_num,school_email,second_email) values($ID,'$name','$password','$wechatNumber','$phoneNumber','$schoolEmail','$otherEmail')";
 	$result2=mysqli_query($link,$sql2);
 	echo "Regestration successfully, please login";

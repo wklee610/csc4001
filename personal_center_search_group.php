@@ -19,11 +19,9 @@
           
             </div>
 
-            <button type="button" class="btn btn-link col-md-10 col-md-push-4  navbar-btn" data-target="#user_page" onclick="window.open ('///UserCenter///.html')">
-                User Center
-            </button>
+  
         
-            <button type="button" class="btn btn-link col-md-push-3 navbar-btn" data-target="#login_page" onclick="window.open ('login_page.html')">
+            <button type="button" class="btn btn-link col-md-10 col-md-push-3 navbar-btn" data-target="#login_page" onclick="window.open ('login_page.html')">
                 Homepage
             </button>
 

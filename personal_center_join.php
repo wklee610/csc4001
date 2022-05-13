@@ -25,11 +25,11 @@ if($row2==null){
     $addsql="insert into `tojoin`(groupID,userID) values ('$groupid','$uid')";
     $result3=mysqli_query($link,$addsql);
     echo 'Successfully joined.';
-    //header("Refresh:2;url=personal_center_page.html");
-    $sql4="select * from `tojoin` where groupID='$groupid'";
+
+    $sql4="select * from `tojoin` where groupID='$groupid'";//search joining info in the db where other users also join this group
     $result4=mysqli_query($link,$sql4);
 
-    while($row=mysqli_fetch_array($result4)){
+    while($row=mysqli_fetch_array($result4)){//print info of users inside this group
         $uid2=$row["userID"];
         $sql5="select * from user where userID='$uid2'";
         $result5=mysqli_query($link,$sql5);

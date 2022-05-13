@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Creation</title>
+    <!-- Import boostrap and jquery-->>
     <link href="bootstrap/css/bootstrap.min.css" rel= "stylesheet" type="text/css"> 
     <script src="jquery/jquery-3.6.0.min.js" type = "text/javascript" charset="utf-8"></script>
     <script src ="bootstrap/js/bootstrap.min.js" type = "text/javascript" charset="utf-8"></script>
@@ -13,12 +14,13 @@
 
 
 <body class="container">
+    <!--Upper navybar-->
     <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
-        
+        <!-- The left most header to show our group name-->
         <div class="navbar-header">
         <a class="navbar-brand" href="#">Groupin</a>
-
+         <!-- Label-like button "Homepage" to return to login page-->
         </div>
         <button type="button" class="btn btn-link col-md-offset-9 navbar-btn" data-target="#login_page" onclick="window.open ('login_page.html')">
             Homepage
@@ -30,32 +32,36 @@
 
     <div class="row">
     <div class="col-md-3"></div>
-
+    <!-- Page tile -->
     <div class="col-md-6">
         <h9>&nbsp;</h9>
         <legend class="text-center">Group Creation</legend>
         <h9>&nbsp;</h9>
 
-        
+    <!-- Form that users to fill out the exact information of the group-->
     <form action = "make_group.php" class = "form-horizontal" role="form" method="post">
+        <!--Group name-->
     <div class="form-group">
         <label for="inputUsername" class="col-md-3 control-label">Group Name</label>
         <div class="col-md-9">
         <input type="username" class="form-control" name="inputGroupName" placeholder="Group Name">
         </div>
     </div>
+        <!--Class ID-->
     <div class="form-group">
         <label for="inputClassID" class="col-md-3 control-label">Class ID</label>
         <div class="col-md-9">
         <input type="classID" class="form-control" name="inputClassID" placeholder="Class ID">
         </div>
     </div>
+        <!--Group discription-->
     <div class="form-group">
         <label for="inputGroupDesc" class="col-md-3 control-label">Group Description</label>
         <div class="col-md-9">
         <input type="groupdesc" class="form-control" name="inputGroupDescription" placeholder="Group Description">
         </div>
     </div>
+        <!--Reserved Quota-->
     <div class="form-group">
         <label for="inputReservedQuota" class="col-md-3 control-label">Reserved Quota</label>
         <div class="col-md-9">
@@ -65,7 +71,7 @@
     
 
 
-    
+        <!--Submit Button -->
     <div class="form-group">
         <div class="col-md-offset-6 col-md-5">
         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-user"></span> Submit</button>

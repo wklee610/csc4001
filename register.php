@@ -26,8 +26,8 @@ header("Refresh:2;url=register_page.html");}
 		$IDsql="select * from user where userID='$ID'";
 		$IDresult=mysqli_query($link,$IDsql);
 		$IDrow=mysqli_fetch_assoc($IDresult);
-		if($IDrow!=null){
-			$ID=mt_rand(1,999999999);
+		if($IDrow!=null){//if this user ID was already assigned
+			$ID=mt_rand(1,999999999);//change it for another one until it's not repeated
 		}else{
 			break;
 		}

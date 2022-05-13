@@ -21,7 +21,7 @@ CREATE TABLE `user` (
 DROP TABLE if EXISTS `group`;
 
 CREATE TABLE `group` (
-	`groupID` INT NOT NULL PRIMARY KEY,
+	`groupID` VARCHAR(10) NOT NULL PRIMARY KEY,
 	`groupname` VARCHAR(20) NOT NULL,
 	`classID` VARCHAR(10),
 	`leaderID` CHAR(9) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE `group` (
 DROP TABLE if EXISTS `content`;
 
 CREATE TABLE `content` (
-	`leaderID` CHAR(9) NOT NULL PRIMARY KEY,
+	`leaderID` VARCHAR(9) NOT NULL PRIMARY KEY,
 	`description` TEXT,
 	`groupID` INT NOT NULL,
 	`classID` VARCHAR(10),
@@ -44,9 +44,16 @@ CREATE TABLE `content` (
 DROP TABLE if EXISTS `credit`;
 
 CREATE TABLE `credit` (
-	`userID` CHAR(9) NOT NULL PRIMARY KEY,
+	`userID` VARCHAR(9) NOT NULL PRIMARY KEY,
 	`username` VARCHAR(20) NOT NULL,
 	`credit` INT NOT NULL,
 	`groupID` INT NOT NULL
 );
 
+DROP TABLE if EXISTS `tojoin`;
+
+CREATE TABLE `tojoin`(
+	`groupID` VARCHAR(10) NOT NULL,
+	`userID` VARCHAR(9) NOT NULL
+	
+);

@@ -4,6 +4,7 @@ USE `Groupin`;							#use database of Groupin
 
 DROP TABLE if EXISTS `user`;					#drop table if has name of the user 
 
+#create table of user
 CREATE TABLE `user` (
 	`userID` VARCHAR(9) NOT NULL PRIMARY KEY,
 	`username` VARCHAR(20) NOT NULL,
@@ -19,7 +20,7 @@ CREATE TABLE `user` (
 
 
 DROP TABLE if EXISTS `group`;					#drop table if has name of the group 
-
+#create table of group
 CREATE TABLE `group` (
 	`groupID` VARCHAR(10) NOT NULL PRIMARY KEY,
 	`groupname` VARCHAR(20) NOT NULL,
@@ -31,7 +32,7 @@ CREATE TABLE `group` (
 
 
 DROP TABLE if EXISTS `content`;					#drop table if has name of the content 
-
+#create table of content
 CREATE TABLE `content` (
 	`leaderID` VARCHAR(9) NOT NULL PRIMARY KEY,
 	`description` TEXT,
@@ -41,8 +42,8 @@ CREATE TABLE `content` (
 );
 	
 	
-DROP TABLE if EXISTS `credit`;
-
+DROP TABLE if EXISTS `credit`;					#drop table if has name of the credit 
+#create table of credit
 CREATE TABLE `credit` (
 	`userID` VARCHAR(9) NOT NULL PRIMARY KEY,
 	`username` VARCHAR(20) NOT NULL,
@@ -51,7 +52,7 @@ CREATE TABLE `credit` (
 );
 
 DROP TABLE if EXISTS `tojoin`;					#drop table if has name of the tojoin 
-
+#create table of tojoin
 CREATE TABLE `tojoin`(
 	`groupID` VARCHAR(10) NOT NULL,
 	`userID` VARCHAR(9) NOT NULL
